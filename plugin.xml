@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.4"?>
+<plugin>
+
+   <extension
+         point="org.eclipse.ui.commands">
+      <category
+            name="Sample Category"
+            id="JWaveIDEv2.commands.category">
+      </category>
+      <command
+            name="Connect"
+            categoryId="JWaveIDEv2.commands.category"
+            id="JWaveIDEv2.commands.connectCommand">
+      </command>
+      <command
+            name="Open Wave"
+            categoryId="JWaveIDEv2.commands.category"
+            id="JWaveIDEv2.commands.openCommand">
+      </command>
+      <command
+            name="Update Editor"
+            categoryId="JWaveIDEv2.commands.category"
+            id="JWaveIDEv2.commands.updateCommand">
+      </command>
+      <command
+            name="Save to Wave"
+            categoryId="JWaveIDEv2.commands.category"
+            id="JWaveIDEv2.commands.saveCommand">
+      </command>
+      <command
+            name="Set Update Rate"
+            categoryId="JWaveIDEv2.commands.category"
+            id="JWaveIDEv2.commands.updateRateCommand">
+      </command>
+      <command
+            name="Add Participant"
+            categoryId="JWaveIDEv2.commands.category"
+            id="JWaveIDEv2.commands.addParticipantCommand">
+      </command>
+   </extension>
+   <extension
+         point="org.eclipse.ui.handlers">
+      <handler
+            commandId="JWaveIDEv2.commands.connectCommand"
+            class="jwaveidev2.handlers.JWaveHandler">
+      </handler>
+      <handler
+            commandId="JWaveIDEv2.commands.saveCommand"
+            class="jwaveidev2.handlers.JWaveHandler">
+      </handler>
+      <handler
+            commandId="JWaveIDEv2.commands.openCommand"
+            class="jwaveidev2.handlers.JWaveHandler">
+      </handler>
+      <handler
+            commandId="JWaveIDEv2.commands.updateCommand"
+            class="jwaveidev2.handlers.JWaveHandler">
+      </handler>
+      <handler
+            commandId="JWaveIDEv2.commands.updateRateCommand"
+            class="jwaveidev2.handlers.JWaveHandler">
+      </handler>
+      <handler
+            commandId="JWaveIDEv2.commands.addParticipantCommand"
+            class="jwaveidev2.handlers.JWaveHandler">
+      </handler>
+   </extension>
+   
+   <extension
+         point="org.eclipse.ui.bindings">
+      <key
+            commandId="JWaveIDEv2.commands.connectCommand"
+            contextId="org.eclipse.ui.contexts.window"
+            sequence="M1+7"
+            schemeId="org.eclipse.ui.defaultAcceleratorConfiguration">
+      </key>
+      <key
+            commandId="JWaveIDEv2.commands.openCommand"
+            contextId="org.eclipse.ui.contexts.window"
+            sequence="M1+7"
+            schemeId="org.eclipse.ui.defaultAcceleratorConfiguration">
+      </key>
+      <key
+            commandId="JWaveIDEv2.commands.updateCommand"
+            contextId="org.eclipse.ui.contexts.window"
+            sequence="M1+7"
+            schemeId="org.eclipse.ui.defaultAcceleratorConfiguration">
+      </key>
+      <key
+            commandId="JWaveIDEv2.commands.saveCommand"
+            contextId="org.eclipse.ui.contexts.window"
+            sequence="M1+6"
+            schemeId="org.eclipse.ui.defaultAcceleratorConfiguration">
+      </key>
+      <key
+            commandId="JWaveIDEv2.commands.updateRateCommand"
+            contextId="org.eclipse.ui.contexts.window"
+            sequence="M1+7"
+            schemeId="org.eclipse.ui.defaultAcceleratorConfiguration">
+      </key>
+      <key
+            commandId="JWaveIDEv2.commands.addParticipantCommand"
+            contextId="org.eclipse.ui.contexts.window"
+            sequence="M1+7"
+            schemeId="org.eclipse.ui.defaultAcceleratorConfiguration">
+      </key>
+   </extension>
+   <extension
+         point="org.eclipse.ui.menus">
+      <menuContribution
+            locationURI="menu:org.eclipse.ui.main.menu?after=additions">
+         <menu
+               label="JWave Menu"
+               mnemonic="M"
+               id="JWaveIDEv2.menus.sampleMenu">
+            <command
+                  commandId="JWaveIDEv2.commands.connectCommand"
+                  mnemonic="S"
+                  id="JWaveIDEv2.commands.connectCommand">
+            </command>
+            <command
+                  commandId="JWaveIDEv2.commands.openCommand"
+                  mnemonic="S"
+                  id="JWaveIDEv2.commands.connectCommand">
+            </command>
+            <command
+                  commandId="JWaveIDEv2.commands.updateCommand"
+                  mnemonic="S"
+                  id="JWaveIDEv2.commands.connectCommand">
+            </command>
+            <command
+                  commandId="JWaveIDEv2.commands.saveCommand"
+                  mnemonic="S"
+                  id="JWaveIDEv2.commands.connectCommand">
+            </command>
+            <command
+                  commandId="JWaveIDEv2.commands.updateRateCommand"
+                  mnemonic="S"
+                  id="JWaveIDEv2.commands.updateRateCommand">
+            </command>
+            <command
+                  commandId="JWaveIDEv2.commands.addParticipantCommand"
+                  mnemonic="S"
+                  id="JWaveIDEv2.commands.updateRateCommand">
+            </command>
+         </menu>
+      </menuContribution>
+      <menuContribution
+            locationURI="toolbar:org.eclipse.ui.main.toolbar?after=additions">
+         <toolbar
+               id="JWaveIDEv2.toolbars.sampleToolbar">
+            <command
+                  commandId="JWaveIDEv2.commands.connectCommand"
+                  icon="icons/connect.gif"
+                  tooltip="Connect to the Wave server"
+                  id="JWaveIDEv2.commands.connectCommand">
+            </command>
+            <command
+                  commandId="JWaveIDEv2.commands.openCommand"
+                  icon="icons/open.gif"
+                  tooltip="Open Wave"
+                  id="JWaveIDEv2.commands.openCommand">
+            </command>
+            <command
+                  commandId="JWaveIDEv2.commands.updateCommand"
+                  icon="icons/update.gif"
+                  tooltip="Update Editor"
+                  id="JWaveIDEv2.commands.connectCommand">
+            </command>
+            <command
+                  commandId="JWaveIDEv2.commands.saveCommand"
+                  icon="icons/save.gif"
+                  tooltip="Save to Wave"
+                  id="JWaveIDEv2.commands.connectCommand">
+            </command>
+            <command
+                  commandId="JWaveIDEv2.commands.addParticipantCommand"
+                  icon="icons/addParticipant.gif"
+                  tooltip="Add Participant"
+                  id="JWaveIDEv2.commands.updateRateCommand">
+            </command>
+         </toolbar>
+      </menuContribution>
+   </extension>
+
+</plugin>

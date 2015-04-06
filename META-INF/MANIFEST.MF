@@ -1,0 +1,9 @@
+Manifest-Version: 1.0
+Eclipse-SourceBundle: JWaveIDEv2;version="2.0.1.201005060935";roots:="
+ ."
+Bundle-Version: 2.0.1.201005060935
+Bundle-Localization: plugin
+Bundle-Name: %pluginName
+Bundle-ManifestVersion: 2
+Bundle-SymbolicName: JWaveIDEv2.source
+
